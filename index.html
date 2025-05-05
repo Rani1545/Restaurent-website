@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="icon" href="https://images.creativemarket.com/0.1.0/ps/12549705/1200/799/m1/fpnw/wm0/kr-modern-logo-designs-(2)-.jpg?1&s=50b0eb85e71ee89cfe9ad2c6e3445c94">
+</head>
+
+<body>
+    
+    <header class="navbar">
+        <div class="logo">Konaseema Ruchulu...</div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search dishes..." ></input>
+            <button type="submit">search</button>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+
+                <button id="loginBtn">Login</button>
+
+            </ul>
+        </nav>
+
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("navLinks");
+            nav.classList.toggle("active");
+        }
+    </script>
+    <!-- Hidden Login Form (Modal) -->
+    <div id="loginForm" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="Email">Email</label>
+                <input type="text" placeholder="Email@gmail.com" required><br>
+                <label for="Password">Password</label>
+                <input type="password" placeholder="Password" required><br><br>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get Elements
+        const loginBtn = document.getElementById('loginBtn');
+        const loginForm = document.getElementById('loginForm');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Show Form on Button Click
+        loginBtn.onclick = function () {
+            loginForm.style.display = "block";
+        }
+
+        // Close Form on Close Button Click
+        closeBtn.onclick = function () {
+            loginForm.style.display = "none";
+        }
+
+        // Close Form if Clicked Outside Modal
+        window.onclick = function (event) {
+            if (event.target == loginForm) {
+                loginForm.style.display = "none";
+            }
+        }
+    </script>
+
+    <!--main section-->
+    <section class="main" id="home">
+        <video autoplay muted loop>
+            <source src="cook2.mp4" type="video/mp4">
+
+        </video>
+        <div class="display"></div>
+        <h2>Welcome to Konaseema Ruchulu 😋!</h2>
+        <p>Every bite, a burst of flavor find your favorite recipe</p>
+        </div>
+    </section>
+
+
+    <!--recipe section-->
+    <section class="dishes" id="recipes">
+        <h1>Special Dishes</h1>
+        <div class="dish-section">
+            <div class="dish-box">
+                <img src="https://i.pinimg.com/originals/18/ff/e9/18ffe9970d55269d6e0d3a6266950c8c.jpg" ailt="">
+                <h2>Veg Meals</h2>
+                <p>Enjoy a hearty Veg Meal with aromatic rice, flavorful curries, crispy papad, and refreshing curd a
+                    true Indian delight!</p>
+                    <b>Rs.250</b>
+                <a href="#">Order</a>
+
+            </div>
+            <div class="dish-box">
+                <img src="https://www.caleidoscope.in/wp-content/uploads/2023/07/traditional-South-Indian-food.jpg"
+                    alt="">
+                <h2>Andhra Veg Meals</h2>
+                <p>A spicy and flavorful Andhra-style Veg Meal with rice, pappu (dal), sambar, chutneys, curd, pickles,
+                    and crispy papad.</p>
+                    <b>Rs.350</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/427/cb95f4b7bb61ae216b32f85bb7b7c427.jpg?output-format=webp"
+                    alt="">
+                <h2>Parota with Chicken</h2>
+                <p>chicken leg piece cooked in spicy masala, paired with soft, flaky parotta. A flavorful meal that
+                    satisfies every craving!</p>
+                    <b>Rs.200</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/082/7142d760288c18777aae77800592a082.jpeg" alt="">
+                <h2>Chicken Mandi</h2>
+                <p>Flavorful basmati rice and chicken leg piece, infused with traditional Arabic spices a true feast for
+                    biryani lovers!</p>
+                    <b>Rs.1050</b>
+                <a href="#">Order</a>
+            </div>
+        </div>
+    </section>
+    <section class="dishes">
+        <h1>Non-Veg Dishes</h1>
+        <div class="dish-section">
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/17e/68ebc60aec1794b2001a6d15039b717e.jpeg" ailt="img1">
+                <h2>Chicken Biryani</h2>
+                <p>chicken pieces and layered with basmati rice, a perfect balance of flavors. It’s a popular and
+                    flavorful biryani enjoyed by many people.</p>
+                    <b>Rs.450</b>
+                <a href="#">Order</a>
+
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/94c/d3bb022105d1b2e1a5437dca50bbd94c.jpeg" alt="img2">
+                <h2>Mutton Biryani</h2>
+                <p>mutton pieces are cooked with fragrant basmati rice spices,creating a hearty,flavorful dish. The meat
+                    is slow-cooked absorbing spices</p>
+                    <b>Rs.599</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/e27/5884edb497ab2263224ed4f428122e27.jpg" alt="img3">
+                <h2>Mughlai Biryani</h2>
+                <p>This luxurious biryani combines aromatic basmati rice with rich, creamy gravy and fragrant spices,
+                    often enhanced with saffron.</p>
+                    <b>Rs.460</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/476/4555092a618a624999ebc34ffc7c6476.jpg" alt="img4">
+                <h2>Dum Biryani</h2>
+                <p>A traditional slow-cooked biryani where marinated meat or vegetables and rice are layered and cooked
+                    under a sealed lid to preserve the flavors</p>
+                    <b>Rs.1050</b>
+                <a href="#">Order</a>
+            </div>
+        </div>
+    </section>
+    <section class="dishes">
+        <h1>Veg Dishes</h1>
+        <div class="dish-section">
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/pictures/6/94086/2f41986d4b7c2f781ab55e7a0d82d837_o2_featured_v2.jpg"
+                    ailt="img1">
+                <h2>Rice with Parota</h2>
+                <p>Soft, flaky parotas served alongside steaming hot rice and a variety of curries, creating a
+                    comforting and satisfying meal.</p>
+                    <b>Rs.250</b>
+                <a href="#">Order</a>
+
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/pictures/chains/5/19147625/8a05eaf26abe3d368df3bcbce2e4a58a_o2_featured_v2.jpg?output-format=webp"
+                    alt="img2">
+                <h2>Bagara Rice</h2>
+                <p>Fragrant and mildly spiced, Bagara Rice is a flavorful Hyderabadi dish cooked with aromatic spices,
+                    perfect as a side or main dish.</p>
+                    <b>Rs.150</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/cff/f5f94d9e48bde1ce152a8f43d3e07cff.jpeg" alt="img3">
+                <h2>Pure Veg Meals</h2>
+                <p>A wholesome and hearty platter featuring a variety of flavorful vegetarian dishes, balanced to offer
+                    a complete traditional meal experience.</p>
+                    <b>Rs.270</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/pictures/6/19533236/a9668c073cefd2db82631e75cc71fe72_o2_featured_v2.jpg"
+                    alt="img4">
+                <h2>Pulihora</h2>
+                <p>A tangy and spicy South Indian rice dish flavored with tamarind, mustard seeds, and curry leaves,
+                    offering a burst of traditional flavors.</p>
+                    <b>Rs.220</b>
+                <a href="#">Order</a>
+            </div>
+        </div>
+    </section>
+    <section class="dishes">
+        <h1>Desserts</h1>
+        <div class="dish-section">
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/pictures/5/19701655/9c87f7342e14a020689c2e28bac60998_o2_featured_v2.jpg?output-format=webp"
+                    alt="img1">
+                <h2>Ice-Cream</h2>
+                <p>A creamy and smooth frozen treat available in chilled dessert in a variety of flavors that refreshes
+                    and satisfies every tooth.</p>
+                    <b>Rs.100</b>
+                <a href="#">Order</a>
+
+            </div>
+            <div class="dish-box">
+                <img src="https://th.bing.com/th/id/OIP.Zy8lwRVFbdVT-hHOF8VUpgHaHa?w=202&h=202&c=7&r=0&o=7&cb=iwp1&dpr=1.5&pid=1.7&rm=3"
+                    alt="img2">
+                <h2>Cake</h2>
+                <p>A soft, fluffy delight available in countless flavors, perfect for celebrations and sweet cravings.
+                </p>
+                <b>Rs.550</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://ts4.mm.bing.net/th?id=OIP.B32bansRI7RS3yfbUSEBNwHaHa&pid=15.1" alt="img3">
+
+                <h2>Gulab Jamun</h2>
+                <p>Soft, melt-in-the-mouth dumplings soaked in fragrant sugar syrup, a classic Indian sweet loved by
+                    all.</p>
+                    <b>Rs.150</b>
+                <a href="#">Order</a>
+            </div>
+            <div class="dish-box">
+                <img src="https://b.zmtcdn.com/data/dish_photos/6d3/d5cd8b240f3298d19b566b63d53d66d3.jpeg" alt="img4">
+                <h2>Chocolate</h2>
+                <p>Rich, velvety, and irresistible, chocolate is the ultimate treat for indulgence and happiness.</p>
+                <b>Rs.180</b>
+                <a href=" #">Order</a>
+            </div>
+        </div>
+
+
+        <div class="dish-section">
+            <div class="dish-box">
+                <video autoplay muted loop>
+                    <source src="cookv.mp4.mp4" type="video/mp4">
+
+                </video>
+
+            </div>
+            <div class="dish-box">
+                <video autoplay muted loop>
+                    <source src="cookv.mp4.mp4" type="video/mp4">
+
+                </video>
+            </div>
+            <div class="dish-box">
+                <video autoplay muted loop>
+                    <source src="cookv.mp4.mp4" type="video/mp4">
+
+                </video>
+            </div>
+
+        </div>
+    </section>
+    <section class="reviews-section" id="reviews">
+        <div class="container1">
+            <h2>Customer Reviews</h2>
+            <p>See what our guests are saying about our restaurant and dishes!</p>
+
+            <div class="reviews">
+                <div class="review">
+                    <h3>vidya</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Absolutely flavorful! The spices were perfectly balanced, and the chicken was juicy and tender.
+                        A must-try for all biryani lovers!"</p>
+                </div>
+
+                <div class="review">
+                    <h3>Lochan</h3>
+                    <p>⭐️⭐️⭐️⭐️☆</p>
+                    <p>"Rich in taste and cooked to perfection. The mutton was so soft, it literally melted in my mouth.
+                        Loved the aroma and authenticity!"</p>
+                </div>
+
+                <div class="review">
+                    <h3>Shiva</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Being a vegetarian, I was amazed by the depth of flavor in the veg biryani. Fresh vegetables,
+                        fragrant rice, and the right amount of spices!"</p>
+                </div>
+                <div class="review">
+                    <h3>lahari</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"A wholesome and satisfying meal! Every dish on the thali had a unique taste — from the sambar to
+                        the vegetable fry. Great value for money too!"</p>
+                </div>
+                <div class="review">
+                    <h3>Raji</h3>
+                    <p>⭐️⭐️⭐️⭐️☆</p>
+                    <p>"A wholesome and satisfying meal! Every dish on the thali had a unique taste — from the sambar to
+                        the vegetable fry. Great value for money too!"</p>
+                </div>
+                <div class="review">
+                    <h3>lahari</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Loved the variety paneer butter masala, dal makhani, naan, and rice, all served fresh and hot.
+                        Perfect for a hearty lunch."</p>
+                </div>
+                <div class="review">
+                    <h3>lucky</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"The meals were packed with flavors and nutrition. The curd and rasam were outstanding.
+                        Definitely coming back for this!"</p>
+                </div>
+                <div class="review">
+                    <h3>Vinod</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Soft, warm, and just the right amount of sweetness. One of the best gulab jamuns I’ve had in a
+                        while!"</p>
+                </div>
+                <div class="review">
+                    <h3>Ramesh</h3>
+                    <p>⭐️⭐️⭐️⭐️☆</p>
+                    <p>"Incredibly creamy and refreshing! The flavor of saffron and cardamom was delightful. Perfect end
+                        to my meal."</p>
+                </div>
+                <div class="review">
+                    <h3>Roji</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Fudgy brownie paired with vanilla ice cream heavenly combination! A must-try for all dessert
+                        lovers!."</p>
+                </div>
+                <div class="review">
+                    <h3>Rakesh</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Best Biryani in town! The staff was very friendly and attentive."</p>
+                </div>
+                <div class="review">
+                    <h3>Lekhana</h3>
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Absolutely loved the pasta! Fresh ingredients and cozy atmosphere. Highly recommend!"</p>
+                </div>
+            </div>
+
+            <!-- Add a form for submitting new reviews -->
+            <div class="review-form">
+                <h3>Leave a Review</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="text" placeholder="Dish Name (optional)" />
+                    <textarea placeholder="Your Review" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="aboutt-section">
+        <div class="container2">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Konaseema Ruchulu</strong> where taste meets tradition!</p>
+
+            <p>Located in Amalapuram, our restaurant is a perfect blend of authentic flavors, warm hospitality, and cozy
+                ambiance.
+                We specialize in serving mouth-watering varieties of Biryani, wholesome Veg Meals, and delightful
+                Desserts, each prepared with the finest ingredients and lots of love.</p>
+
+            <p>At <strong>Konaseema Ruchulu</strong>, we believe in offering a culinary journey that satisfies your
+                cravings and leaves you with unforgettable memories.
+                Whether you are a fan of the rich and aromatic Biryani, looking for a comforting South Indian Veg Meal,
+                or have a sweet tooth craving for traditional desserts, we have something special for every food lover!
+            </p>
+
+            <p>Our team of passionate chefs brings years of experience to the table, ensuring that every dish is crafted
+                to perfection.
+                We prioritize hygiene, quality, and customer satisfaction, making us a favorite destination for
+                families, foodies, and everyone in between.</p>
+
+            <p>Come, dine with us, and experience the true essence of flavors one plate at a time!</p>
+
+            <p><strong>Opening Hours:</strong><br>
+                Monday - Sunday: 11:00 AM – 11:00 PM</p>
+
+            <p><strong>Address:</strong><br>
+                Amalapuram,Andhra Pradesh</p>
+
+            <p><strong>Contact:</strong><br>
+                Phone: 92878266955<br>
+                Email: konaseemaruchlu@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer1">
+            Konaseema Ruchulu 😍😍
+        </div>
+        <div class="footer2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>About</a>
+                <a>Careers</a>
+                <a>Press Releases</a>
+
+
+            </ul>
+            <ul>
+                <p>Connect with Us</p>
+                <a>Facebook</a>
+                <a>Twitter</a>
+                <a>Instagram</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+
+                <a>Sell</a>
+                <a>Protect and Build Your Brand</a>
+                <a>Global Selling</a>
+                <a>Supply</a>
+                <a>Become an Affiliate</a>
+
+                <a>Advertise Your Products</a>
+
+
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Your Account</a>
+                <a>Returns Centre</a>
+                <a>Recalls and Product Safety Alerts</a>
+                <a>100% Purchase Protection</a>
+
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="footer1">
+            <p>&copy;2025 Konaseema Ruchulu</p>
+        </div>
+       
+</body>
+
+</html>
